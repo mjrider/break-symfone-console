@@ -1,0 +1,13 @@
+run: php test.php
+
+breaks on my console between 72 and 134 columns with the following error
+
+PHP Fatal error:  Uncaught Symfony\Component\Console\Exception\InvalidArgumentException: Incorrectly nested style tag found. in /tmp/example-minimum/vendor/symfony/symfony/src/Symfony/Component/Console/Formatter/OutputFormatterStyleStack.php:87
+Stack trace:
+#0 /tmp/example-minimum/vendor/symfony/symfony/src/Symfony/Component/Console/Formatter/OutputFormatter.php(185): Symfony\Component\Console\Formatter\OutputFormatterStyleStack->pop(Object(Symfony\Component\Console\Formatter\OutputFormatterStyle))
+#1 /tmp/example-minimum/vendor/symfony/symfony/src/Symfony/Component/Console/Application.php(653): Symfony\Component\Console\Formatter\OutputFormatter->format('<error>   => '1...')
+#2 /tmp/example-minimum/vendor/symfony/symfony/src/Symfony/Component/Console/Application.php(127): Symfony\Component\Console\Application->renderException(Object(Exception), Object(Symfony\Component\Console\Output\StreamOutput))
+#3 /tmp/example-minimum/test.php(17): Symfony\Component\Console\Application->run()
+#4 {main}
+  thrown in /tmp/example-minimum/vendor/symfony/symfony/src/Symfony/Component/Console/Formatter/OutputFormatterStyleStack.php on line 87
+

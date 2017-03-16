@@ -1,0 +1,8 @@
+{
+    "name": "mjrider/break-symfone-console",
+    "description": "Minimal example to break symfony console",
+    "type": "project",
+    "require": {
+	"symfony/framework-standard-edition": "^3.1"
+    }
+}
